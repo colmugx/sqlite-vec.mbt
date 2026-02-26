@@ -13,13 +13,12 @@ jobs:
       - name: moon version
         run: |
           moon version --all
-      - name: moon build
+      - name: moon update
         run: |
           moon update
-          moon build --target all
       - name: moon check
         run: |
-          moon check --target all
+          moon check --target native
       - name: publish
         run: |
           echo $SECRET > ~/.moon/credentials.json

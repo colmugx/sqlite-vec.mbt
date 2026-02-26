@@ -22,6 +22,8 @@ jobs:
       - name: publish
         run: |
           echo $SECRET > ~/.moon/credentials.json
+          echo "cat credentials"
+          cat ~/.moon/credentials.json
           moon publish
           rm ~/.moon/credentials.json
         env:

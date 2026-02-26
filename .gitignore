@@ -1,8 +1,14 @@
-target/
-.mooncakes/
-.DS_Store
-*.db
-.moonagent
+# MoonBit
 _build/
 target
-_build
+.mooncakes/
+.moonagent/
+
+# macOS
+.DS_Store
+
+# Database created for testing
+*.db
+
+# clangd
+compile_flags.txt

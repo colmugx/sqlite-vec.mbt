@@ -44,13 +44,13 @@ fn select_company(conn : @sqlite3.Connection) -> Unit raise {
   )
   if stmt.step() {
     let column0 : Int = stmt.column(index=0)
-    inspect(column0, content="1")
+    assert_eq(column0, 1)
     let column1 : String = stmt.column_blob_as_string(index=1)
-    inspect(column1, content="Paul")
+    assert_eq(column1, "Paul")
     let column3 : String = stmt.column_blob_as_string(index=3)
-    inspect(column3, content="California")
+    assert_eq(column3, "California")
     let column4 : Double = stmt.column(index=4)
-    inspect(column4, content="20000")
+    assert_eq(column4.to_int(), 20000)
   }
 }
 

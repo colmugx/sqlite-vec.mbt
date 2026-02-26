@@ -62,7 +62,7 @@ pub fn Connection::prepare(
 pub fn[T : Bind] Statement::bind(
   self : Statement,
   index~ : Int,
-  val~ : T,
+  val : T,
   loc~ : SourceLoc,
 ) -> Unit raise SqliteError {
   T::bind(self, index, val, loc~)
@@ -73,7 +73,7 @@ pub fn[T : Bind] Statement::bind(
 pub fn Statement::bind_string_as_blob(
   self : Statement,
   index~ : Int,
-  val~ : String,
+  val : String,
   loc~ : SourceLoc,
 ) -> Unit raise SqliteError {
   let rescode = sqlite3_bind_string(self, index, val, val.length() * 2)

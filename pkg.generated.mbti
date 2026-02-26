@@ -94,9 +94,9 @@ pub fn Connection::prepare(Self, String, loc~ : SourceLoc) -> Statement raise Sq
 #external
 pub type Statement
 #callsite(autofill(loc))
-pub fn[T : Bind] Statement::bind(Self, index~ : Int, val~ : T, loc~ : SourceLoc) -> Unit raise SqliteError
+pub fn[T : Bind] Statement::bind(Self, index~ : Int, T, loc~ : SourceLoc) -> Unit raise SqliteError
 #callsite(autofill(loc))
-pub fn Statement::bind_string_as_blob(Self, index~ : Int, val~ : String, loc~ : SourceLoc) -> Unit raise SqliteError
+pub fn Statement::bind_string_as_blob(Self, index~ : Int, String, loc~ : SourceLoc) -> Unit raise SqliteError
 pub fn[T : Column] Statement::column(Self, index~ : Int) -> T
 pub fn Statement::column_blob_as_string(Self, index~ : Int) -> String
 #callsite(autofill(loc))

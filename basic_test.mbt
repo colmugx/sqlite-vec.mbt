@@ -26,11 +26,11 @@ fn insert_company(
       #|INSERT INTO COMPANY (ID,NAME,AGE,ADDRESS,SALARY) VALUES (?,?,?,?,?);
     ),
   )
-  stmt.bind(index=1, val=1)
-  stmt.bind_string_as_blob(index=2, val="Paul")
-  stmt.bind(index=3, val=32)
-  stmt.bind_string_as_blob(index=4, val="California")
-  stmt.bind(index=5, val=20000.00)
+  stmt.bind(index=1, 1)
+  stmt.bind_string_as_blob(index=2, "Paul")
+  stmt.bind(index=3, 32)
+  stmt.bind_string_as_blob(index=4, "California")
+  stmt.bind(index=5, 20000.00)
   stmt.step_once()
   stmt.finalize()
 }

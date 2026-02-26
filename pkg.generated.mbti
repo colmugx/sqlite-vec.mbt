@@ -1,5 +1,5 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "myfreess/sqlite3"
+package "moonbit-community/sqlite3"
 
 // Values
 pub const SQLITE_ABORT : Int = 4

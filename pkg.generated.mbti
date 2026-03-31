@@ -77,8 +77,7 @@ pub const SQLITE_WARNING : Int = 28
 // Errors
 pub suberror SqliteError {
   SqliteError((Int, SourceLoc))
-}
-pub impl Show for SqliteError
+} derive(Show)
 
 // Types and methods
 type Connection

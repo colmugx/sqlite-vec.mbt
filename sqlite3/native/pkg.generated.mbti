@@ -1,5 +1,5 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "moonbit-community/sqlite3/internal/ffi"
+package "colmugx/sqlite3/native"
 
 // Values
 pub fn sqlite3_allocate() -> Sqlite3
@@ -32,6 +32,8 @@ pub fn sqlite3_column_text(Sqlite3Stmt, Int) -> Bytes
 
 pub fn sqlite3_column_type(Sqlite3Stmt, Int) -> Int
 
+pub fn sqlite3_enable_load_extension(Sqlite3, Int) -> Int
+
 pub fn sqlite3_errcode(Sqlite3) -> Int
 
 pub fn sqlite3_errmsg(Sqlite3) -> Bytes
@@ -39,6 +41,8 @@ pub fn sqlite3_errmsg(Sqlite3) -> Bytes
 pub fn sqlite3_exec(Sqlite3, Bytes) -> Int
 
 pub fn sqlite3_finalize(Sqlite3Stmt) -> Int
+
+pub fn sqlite3_load_extension(Sqlite3, Bytes, Bytes) -> Int
 
 pub fn sqlite3_open(Bytes, Sqlite3) -> Int
 
@@ -49,6 +53,8 @@ pub fn sqlite3_reset(Sqlite3Stmt) -> Int
 pub fn sqlite3_step(Sqlite3Stmt) -> Int
 
 pub fn sqlite3_stmt_allocate() -> Sqlite3Stmt
+
+pub fn sqlite3_vec_init(Sqlite3) -> Int
 
 // Errors
 

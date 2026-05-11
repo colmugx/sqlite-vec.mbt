@@ -1,7 +1,8 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "moonbit-community/sqlite3"
+package "colmugx/sqlite3"
 
 import {
+  "colmugx/sqlite3/native",
   "moonbitlang/core/debug",
 }
 
@@ -82,16 +83,26 @@ pub const SQLITE_WARNING : Int = 28
 pub suberror SqliteError {
   SqliteError((Int, SourceLoc))
 } derive(@debug.Debug)
+pub fn SqliteError::new(Int, SourceLoc) -> Self
 
 // Types and methods
 type Connection
 #callsite(autofill(loc))
 pub fn Connection::close(Self, loc~ : SourceLoc) -> Unit raise SqliteError
+#callsite(autofill(loc))
+pub fn Connection::disable_load_extension(Self, loc~ : SourceLoc) -> Unit raise SqliteError
+#callsite(autofill(loc))
+pub fn Connection::enable_load_extension(Self, loc~ : SourceLoc) -> Unit raise SqliteError
 pub fn Connection::get_errmsg(Self) -> String
+#callsite(autofill(loc))
+pub fn Connection::load_extension(Self, (Self) -> Unit raise SqliteError, loc~ : SourceLoc) -> Self raise SqliteError
+#callsite(autofill(loc))
+pub fn Connection::load_extension_file(Self, String, entrypoint? : String, loc~ : SourceLoc) -> Self raise SqliteError
 #callsite(autofill(loc))
 pub fn Connection::open(String, loc~ : SourceLoc) -> Self raise SqliteError
 #callsite(autofill(loc))
 pub fn Connection::prepare(Self, String, loc~ : SourceLoc) -> Statement raise SqliteError
+pub fn Connection::raw(Self) -> @native.Sqlite3
 
 type Statement
 #callsite(autofill(loc))

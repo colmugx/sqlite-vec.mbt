@@ -1,6 +1,6 @@
 # SQLite3.mbt
 
-`moonbit-community/sqlite3` is a lightweight, low-level SQLite3 binding for MoonBit. It exposes the core SQLite C API workflow for opening connections, preparing statements, binding parameters, stepping through results, and reading column values. It is intended for cases where you want a small and direct embedded database interface rather than an ORM or a full query framework.
+`colmugx/sqlite3` is a lightweight, low-level SQLite3 binding for MoonBit. It exposes the core SQLite C API workflow for opening connections, preparing statements, binding parameters, stepping through results, and reading column values. It is intended for cases where you want a small and direct embedded database interface rather than an ORM or a full query framework.
 
 This package currently supports only the `native` target and vendors the SQLite amalgamation source directly in the repository. The bundled SQLite version in this repository is `3.49.1`.
 
@@ -16,7 +16,7 @@ This package currently supports only the `native` target and vendors the SQLite 
 Add the dependency:
 
 ```bash
-moon add moonbit-community/sqlite3
+moon add colmugx/sqlite3
 ```
 
 ## Quick Start

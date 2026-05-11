@@ -5,6 +5,11 @@ pub suberror SqliteError {
 
 ///|
 pub fn Connection::get_errmsg(conn : Connection) -> String {
-  let utf8str = @ffi.sqlite3_errmsg(conn.0)
+  let utf8str = @native.sqlite3_errmsg(conn.0)
   @utf8.decode_lossy(utf8str)
+}
+
+///|
+pub fn SqliteError::new(code : Int, loc : SourceLoc) -> SqliteError {
+  SqliteError((code, loc))
 }

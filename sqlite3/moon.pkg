@@ -1,6 +1,6 @@
 import {
   "moonbitlang/core/encoding/utf8" @utf8,
-  "moonbit-community/sqlite3/internal/ffi" @ffi,
+  "colmugx/sqlite3/native" @native,
 }
 
 options(

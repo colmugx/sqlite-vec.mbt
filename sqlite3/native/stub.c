@@ -285,3 +285,37 @@ moonbit_sqlite3_column_type(moonbit_sqlite3_stmt *wrapper, int32_t idx) {
   assert(wrapper->stmt);
   return (int32_t)sqlite3_column_type(wrapper->stmt, idx);
 }
+
+/* ---------- Extension loading ---------- */
+
+
+MOONBIT_FFI_EXPORT
+int32_t
+moonbit_sqlite3_enable_load_extension(moonbit_sqlite3 *wrapper, int32_t onoff) {
+  assert(wrapper->db);
+  return (int32_t)sqlite3_enable_load_extension(wrapper->db, onoff);
+}
+
+MOONBIT_FFI_EXPORT
+int32_t
+moonbit_sqlite3_load_extension(
+  moonbit_sqlite3 *wrapper,
+  moonbit_bytes_t zFile,
+  moonbit_bytes_t zProc
+) {
+  assert(wrapper->db);
+  const char *file = zFile ? (const char *)zFile : NULL;
+  const char *proc = zProc ? (const char *)zProc : NULL;
+  return (int32_t)sqlite3_load_extension(wrapper->db, file, proc, NULL);
+}
+
+#define SQLITE_CORE
+#include "sqlite-vec.h"
+
+MOONBIT_FFI_EXPORT
+int32_t
+moonbit_sqlite3_vec_init(moonbit_sqlite3 *wrapper) {
+  assert(wrapper->db);
+  return (int32_t)sqlite3_vec_init(wrapper->db, NULL, NULL);
+}
+

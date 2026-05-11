@@ -128,3 +128,22 @@ pub extern "c" fn sqlite3_column_blob(stmt : Sqlite3Stmt, idx : Int) -> Bytes = 
 ///|
 #borrow(stmt)
 pub extern "c" fn sqlite3_column_type(stmt : Sqlite3Stmt, idx : Int) -> Int = "moonbit_sqlite3_column_type"
+
+///|
+#borrow(db)
+pub extern "c" fn sqlite3_enable_load_extension(
+  db : Sqlite3,
+  onoff : Int,
+) -> Int = "moonbit_sqlite3_enable_load_extension"
+
+///|
+#borrow(db, zFile, zProc)
+pub extern "c" fn sqlite3_load_extension(
+  db : Sqlite3,
+  zFile : Bytes,
+  zProc : Bytes,
+) -> Int = "moonbit_sqlite3_load_extension"
+
+///|
+#borrow(db)
+pub extern "c" fn sqlite3_vec_init(db : Sqlite3) -> Int = "moonbit_sqlite3_vec_init"

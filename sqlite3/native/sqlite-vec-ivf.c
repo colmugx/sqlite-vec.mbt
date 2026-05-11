@@ -1,0 +1,1 @@
+../../sqlite-vec/vendor/sqlite-vec/sqlite-vec-ivf.c

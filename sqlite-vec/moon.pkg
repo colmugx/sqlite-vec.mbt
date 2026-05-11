@@ -1,0 +1,8 @@
+import {
+  "colmugx/sqlite3" @sqlite3,
+  "colmugx/sqlite3/native" @native,
+}
+
+options(
+  backend: [ "native" ],
+)

@@ -1,0 +1,16 @@
+{
+  "name": "colmugx/sqlite-vec",
+  "version": "0.2.0",
+  "deps": {},
+  "readme": "README.md",
+  "repository": "https://github.com/colmugx/sqlite-vec.mbt",
+  "license": "Apache-2.0",
+  "keywords": [
+    "sqlite",
+    "vector",
+    "sqlite-vec",
+    "ffi"
+  ],
+  "description": "SQLite3 binding with sqlite-vec vector search extension.",
+  "preferred-target": "native"
+}

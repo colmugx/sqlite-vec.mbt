@@ -1,5 +1,0 @@
-members = [
-  "./sqlite-vec",
-  "./sqlite3",
-  "./example",
-]

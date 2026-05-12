@@ -1,3 +1,6 @@
 [submodule "sqlite-vec/vendor/sqlite-vec"]
 	path = sqlite-vec/vendor/sqlite-vec
 	url = https://github.com/asg017/sqlite-vec.git
+[submodule "vendor/sqlite-vec"]
+	path = vendor/sqlite-vec
+	url = https://github.com/asg017/sqlite-vec

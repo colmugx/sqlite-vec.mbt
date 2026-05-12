@@ -1,1 +1,0 @@
-../../sqlite-vec/vendor/sqlite-vec/sqlite-vec-diskann.c

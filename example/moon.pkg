@@ -1,6 +1,5 @@
 import {
-  "colmugx/sqlite-vec" @vec,
-  "colmugx/sqlite3" @sqlite3,
+  "colmugx/sqlite-vec" @sv,
 }
 
 options(

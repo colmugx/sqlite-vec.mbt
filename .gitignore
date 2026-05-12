@@ -12,3 +12,9 @@ target
 
 # clangd
 compile_flags.txt
+
+# Built sqlite-vec loadable extension
+*.dylib
+*.so
+*.dll
+lib/
